@@ -107,5 +107,5 @@ def main():
     net = load_model(input_size,hidden_size,num_layers,num_classes,device,model_path) 
     train(epoch_number,net,unbalanced_dataset,train_dataset,validation_dataset)
 
-    
-main()
+if __name__ == '__main__':
+    main()
