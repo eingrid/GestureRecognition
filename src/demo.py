@@ -5,13 +5,10 @@ import time
 import torch.nn as nn
 import mediapipe as mp
 import numpy as np
-from config import mp_hands, mp_drawing_styles, mp_drawing
-from net import load_model
+from src.config import mp_hands, mp_drawing_styles, mp_drawing
+from src.models.net import load_model
 import argparse
 
-
-
-## Model Preparation And Initialization of Sliding Window
 
 
 def main(args):

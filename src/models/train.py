@@ -2,7 +2,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 import torchmetrics
-from utils import load_model, load_dataset
+from src.utils import load_model, load_dataset
 import sys
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
