@@ -1,11 +1,13 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
+from config import tag_label
 
 class Net(nn.Module):
     def __init__(self,input_size,hidden_size,num_layers,num_classes,device):
         super(Net,self).__init__()
         self.hidden_size = hidden_size
+        self.input_size = input_size
         self.num_layers = num_layers
         h0 = torch.zeros(self.num_layers,16,self.hidden_size).to(device)
         c0 = torch.zeros(self.num_layers,16,self.hidden_size).to(device)
@@ -27,6 +29,10 @@ class Net(nn.Module):
     
     def print_h0(self):
         print(self.h0,self.c0)
+        
+    def label_to_gesture_name(self,label):
+        number_to_label = {v:k for k,v in tag_label.items()}
+        return number_to_label[label]
         
 def load_model(input_size,hidden_size,num_layers,num_classes,device,weights_path = None):
     net = Net(input_size,hidden_size,num_layers,num_classes,device)
