@@ -1,7 +1,10 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
-from config import tag_label
+import sys
+import os
+sys.path.append(os.path.abspath('/mnt/Dev/WORK/hand_gesture'))
+from src.config import tag_label
 
 class Net(nn.Module):
     def __init__(self,input_size,hidden_size,num_layers,num_classes,device):
