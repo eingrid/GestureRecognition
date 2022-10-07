@@ -1,6 +1,6 @@
 # Dynamic Gesture Recognition
 ## Description
-The purpose of the project is to create real-time solution to recognize gestures with oppurtunity for futher improvements to make translator from sign language to text.
+The purpose of the project is to create real-time solution to recognize gestures with opportunity for further improvements to make translator from sign language to text.
 Sliding-window approach with window size 30 frames was used to make gesture recognition dynamic and mediapipe to collect hands' keypoints.
 
 Environment:
