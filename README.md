@@ -56,7 +56,7 @@ Dataset is saved as csv files for each video, also data augmentation (horizontal
 To train model run :
 
 ```shell
-python train.py -train_dataset path_to_folder_with_train_dataset -valid_dataset path_to_folder_with_valid_dataset -epoch_number epoch_number -unbalanced_dataset True
+python train.py --train_dataset path_to_folder_with_train_dataset --valid_dataset path_to_folder_with_valid_dataset --epoch_number epoch_number --unbalanced_dataset True
 ```
 Params explanation:
 
@@ -71,5 +71,5 @@ unbalanced_dataset (optional) - if dataset is balanced then use False, else use 
 To run demo :
 
 ```shell
-python demo.py -model_path path_to_model_weights
+python demo.py --model_path path_to_model_weights
 ```
